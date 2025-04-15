@@ -1,0 +1,12 @@
+.bet-btn {
+  padding: 8px 14px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bet-btn:hover {
+  background-color: #e64a19;
+}

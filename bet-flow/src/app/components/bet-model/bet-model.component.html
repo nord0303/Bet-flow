@@ -1,0 +1,31 @@
+<div *ngIf="show">
+  <div class="modal-backdrop" (click)="close()"></div>
+  <div class="modal-content">
+    <h2>Parier sur un match</h2>
+    <p>Match : {{ match.teamA }} vs {{ match.teamB }}</p>
+
+    <form (ngSubmit)="submitBet()" #betForm="ngForm">
+      <label>Équipe gagnante</label>
+      <select [(ngModel)]="bet.winningTeam" name="winningTeam" required>
+        <option [value]="match.teamA">{{ match.teamA }}</option>
+        <option [value]="match.teamB">{{ match.teamB }}</option>
+      </select>
+
+      <label>Mise (€)</label>
+      <input
+        type="number"
+        [(ngModel)]="bet.betAmount"
+        name="betAmount"
+        required
+        min="1"
+      />
+
+      <div class="modal-actions">
+        <button type="submit" [disabled]="!betForm.form.valid">
+          Valider le pari
+        </button>
+        <button type="button" (click)="close()">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>

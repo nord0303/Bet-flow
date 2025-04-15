@@ -1,0 +1,12 @@
+<div *ngIf="matches.length > 0" class="match-list">
+  <div *ngFor="let match of matches" class="match-item">
+    <div class="teams">
+      <span class="team">{{ match.teamA }}</span>
+      <span class="vs">vs</span>
+      <span class="team">{{ match.teamB }}</span>
+    </div>
+    <app-bet-button [match]="match"></app-bet-button>
+  </div>
+</div>
+
+<p *ngIf="matches.length === 0" class="no-match">Aucun match à afficher.</p>

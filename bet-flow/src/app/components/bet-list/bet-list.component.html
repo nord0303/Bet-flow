@@ -1,0 +1,14 @@
+<ul *ngIf="bets.length > 0" class="bet-list">
+  <li *ngFor="let bet of bets" class="bet-item">
+    <span class="team"
+      >Équipe : <strong>{{ bet.winningTeam }}</strong></span
+    >
+    <span class="amount"
+      >Mise : <strong>{{ bet.betAmount | currency : "EUR" }}</strong></span
+    >
+  </li>
+</ul>
+<p class="total-amount">
+  Mise totale : <strong>{{ getTotalBetAmount() | currency : "EUR" }}</strong>
+</p>
+<p *ngIf="bets.length === 0" class="no-bets">Aucun pari en cours...</p>

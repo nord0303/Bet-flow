@@ -1,0 +1,7 @@
+<div class="featured-match">
+  <h2>Matchs en vedette</h2>
+  <div class="match" *ngFor="let match of featuredMatches">
+    <p>{{ match.teamA }} vs {{ match.teamB }}</p>
+    <button class="bet-btn">Parier maintenant</button>
+  </div>
+</div>

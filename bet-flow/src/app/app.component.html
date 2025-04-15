@@ -1,0 +1,14 @@
+<div>
+  <span>BetFlow</span>
+  <a>Accueil</a>
+  <a>Match</a>
+  <button>Connexion</button>
+</div>
+<a
+  [routerLink]="['/']"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }"
+  >Accueil</a
+>
+<a [routerLink]="['/matches']" routerLinkActive="active">Match</a>
+<router-outlet />
